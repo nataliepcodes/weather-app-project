@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/cb8a87dfa8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <header>Weather APP <i class="fas fa-sun"></i></header>
+    <div class="container">
+      <form class="search-form">
+        <input type="text" class="search-field" placeholder="Enter a city..." />
+        <input type="submit" class="submit" value="Search 🔎 " />
+      </form>
+      <div class="current-weather">
+        <div class="current-day">Tuesday 13:10</div>
+        <div class="row">
+          <div class="col-8">
+            <div class="city">Zurich</div>
+          </div>
+          <div class="col">
+            <div class="current-icon">
+              <i class="fas fa-cloud-sun"></i>
+              <span class="current-temperature"> 25</span>
+              <span class="units">
+                <a href="#" id="celsius-link">°C |</a>
+                <a href="#" id="fahrenheit-link">°F</a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-8">
+            <div class="humidity">
+              Humidity:
+              <span class="humidity-value"> 55</span>
+              <span class="humidity-metric"> %</span>
+            </div>
+            <div class="wind">
+              Wind: <span class="wind-value"> 1</span>
+              <span class="wind-metric">km/h</span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="weather-status">Sunny</div>
+          </div>
+        </div>
+      </div>
+      <div class="forecast">
+        <h2>NEXT FEW DAYS</h2>
+        <div class="row row-cols-5">
+          <div class="col-sm day1">
+            Wed
+            <div class="forecast-icon">
+              <i class="fas fa-sun"></i>
+              <div class="forecast-temperature-high">25 °</div>
+            </div>
+          </div>
+
+          <div class="col-sm day2">
+            Thu
+            <div class="forecast-icon">
+              <i class="fas fa-cloud"></i>
+              <div class="forecast-temperature-high">19 °</div>
+            </div>
+          </div>
+
+          <div class="col-sm day3">
+            Fri
+            <div class="forecast-icon">
+              <i class="fas fa-cloud-rain"></i>
+              <div class="forecast-temperature-high">8 °</div>
+            </div>
+          </div>
+          <div class="col-sm day4">
+            Sat
+            <div class="forecast-icon">
+              <i class="fas fa-bolt"></i>
+              <div class="forecast-temperature-high">15 °</div>
+            </div>
+          </div>
+          <div class="col-sm day5">
+            Sun
+            <div class="forecast-icon">
+              <i class="far fa-snowflake"></i>
+              <div class="forecast-temperature-high">-2 °</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>This app was developed by <strong>Natalie Peyre</strong> 👩‍💻</footer>
+    <script src="src/app.js"></script>
+  </body>
+</html>
