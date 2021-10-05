@@ -106,12 +106,14 @@ input.search-field {
   font-weight: 400;
   position: relative;
   bottom: 15px;
+  text-decoration: none;
+}
+.celsius-link,
+.fahrenheit-link {
+  color: #38a3a5;
+  text-decoration: none;
 }
 
-a {
-  text-decoration: none;
-  color: #38a3a5;
-}
 .forecast {
   background: #b8dfd8;
   border-radius: 10px;
@@ -148,8 +150,16 @@ div.col-sm.day4 {
 
 footer {
   color: white;
-  font-size: 10px;
+  display: flexbox;
+  font-size: 7px;
   font-weight: 400;
   margin: 5px auto;
-  text-align: center;
+  padding-left: 6px;
+  width: 600px;
+}
+.source-link,
+.host-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
 }
