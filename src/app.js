@@ -49,7 +49,6 @@ form.addEventListener("submit", searchWeather);
 
 //Display searched city temp, humidity, wind, current status (via API call)
 function showTemperature(response) {
-  document.querySelector(".city").innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let tempElement = document.querySelector(".current-temperature");
   tempElement.innerHTML = temperature;
