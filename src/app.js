@@ -25,29 +25,8 @@ let days = [
 let day = days[now.getDay()];
 currentDayTime.innerHTML = `${day} ${hours}:${minutes}`;
 
-//Feature: Search city and Display searched city (via API call)
-
-function searchWeather(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector(".search-field");
-  let city = document.querySelector("div.city");
-
-  let apiKey = "95b73a6940f2f07006ff745f669cf92a";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemperature);
-
-  if (searchInput.value) {
-    city.innerHTML = `${searchInput.value}`;
-  } else {
-    city.innerHTML = null;
-    alert("Please enter a city!");
-  }
-}
-
-let form = document.querySelector(".search-form");
-form.addEventListener("submit", searchWeather);
-
 //Display searched city temp, humidity, wind, current status (via API call)
+
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let tempElement = document.querySelector(".current-temperature");
@@ -65,4 +44,21 @@ function showTemperature(response) {
   let description = response.data.weather[0].main;
   let descriptionElement = document.querySelector(".weather-status");
   descriptionElement.innerHTML = description;
+
+  document.querySelector(".city").innerHTML =
+    document.querySelector(".city-input").value;
 }
+
+//Feature: Search city
+//make API call to OpenWeather API, display city name and temperature
+
+function searchCity(event) {
+  event.preventDefault();
+  let apiKey = "95b73a6940f2f07006ff745f669cf92a";
+  let city = document.querySelector(".city-input").value;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+let form = document.querySelector(".search-form");
+form.addEventListener("submit", searchCity);
