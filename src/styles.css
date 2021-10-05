@@ -113,6 +113,7 @@ input.city-input {
 .fahrenheit-link {
   color: #38a3a5;
   text-decoration: none;
+  cursor: default;
 }
 
 .forecast {
