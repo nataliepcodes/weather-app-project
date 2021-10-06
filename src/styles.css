@@ -61,13 +61,12 @@ input.city-input {
 }
 
 .current-day {
-  background: #b8dfd8;
-  border: 1px solid #b8dfd8;
-  border-radius: 6px;
-  color: white;
-  font-size: 12px;
+  color: #38a3a5;
+  font-size: 10px;
+  font-weight: 400;
+  margin-right: 10px;
   padding: 2px;
-  width: fit-content;
+  text-align: right;
 }
 
 .city {
