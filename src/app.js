@@ -60,7 +60,7 @@ function showTemperature(response) {
   console.log(response.data);
 
   let description = response.data.weather[0].main;
-  let descriptionElement = document.querySelector(".weather-status");
+  let descriptionElement = document.querySelector(".weather-description");
   descriptionElement.innerHTML = description;
 
   let city = document.querySelector(".city");
