@@ -22,7 +22,7 @@ input.city-input {
   font-size: 14px;
   font-style: italic;
   font-weight: 400;
-  margin: 15px 10px 5px;
+  margin: 15px 1px 5px 10px;
   padding: 10px;
   width: 250px;
 }
@@ -33,19 +33,17 @@ input.city-input {
   opacity: 1; /* Firefox */
 }
 input.city-input:hover {
-  background: #afebeb;
-  border: 4px solid white;
+  background: #e5e5e5;ß
+  border: 2px solid #b8dfd8;
   border-radius: 9px;
   cursor: default;
-  color: white;
   transition: all 200ms ease-out;
 }
 .submit-button {
-  background: #b0b9b9;
+  background: #f2f2f1;
   border: 2px solid white;
   border-radius: 50px;
   box-shadow: 5px 6px 10px #b8dfd8;
-  margin: 15px 5px;
   padding: 8px;
   text-align: center;
   transition: all 200ms ease;
@@ -53,10 +51,30 @@ input.city-input:hover {
 
 .submit-button:hover {
   cursor: pointer;
-  background: #afebeb;
+  background: #e5e5e5;
   border: 2px solid white;
   border-radius: 50px;
 }
+
+.my-location {
+  
+  border: none;
+  border-radius: 10px;
+  color: red;
+  display: inline-block;
+  font-size: 23px;
+  height: 40px;
+  width: 43px;
+  margin-left: 30px;
+  padding-bottom: 42px;
+  transition: all 200ms ease-in-out;
+}
+
+.my-location:hover {
+  color: #38a3a5;
+  background: #f2f2f1;
+}
+
 .container {
   background: white;
   border-radius: 20px;

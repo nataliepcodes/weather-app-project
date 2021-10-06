@@ -100,6 +100,21 @@ form.addEventListener("submit", handleSubmit);
 
 search("Tokyo");
 
+// Geo-location
+function searchLocation(position) {
+  let apiKey = "95b73a6940f2f07006ff745f669cf92a";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let myLocation = document.querySelector("#my-location");
+myLocation.addEventListener("click", getCurrentLocation);
+
 // Add unit conversion feature
 function showFahrenheitTemperature(event) {
   event.preventDefault();
