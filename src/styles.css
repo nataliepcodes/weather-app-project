@@ -67,8 +67,8 @@ input.city-input {
 .current-day {
   color: #38a3a5;
   font-family: "Lato", sans-serif;
-  font-size: 10px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 300;
   margin-right: 10px;
   padding: 2px;
   text-align: right;

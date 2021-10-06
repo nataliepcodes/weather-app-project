@@ -1,4 +1,4 @@
-// Feature: show current day and time
+// Feature: show current day, month, year and time
 let now = new Date();
 let currentDayTime = document.querySelector("div.current-day");
 
@@ -22,8 +22,25 @@ let days = [
   "Saturday",
 ];
 
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+let currentMonth = months[now.getMonth()];
+let date = now.getDate();
+let year = now.getFullYear();
 let day = days[now.getDay()];
-currentDayTime.innerHTML = `${day} ${hours}:${minutes}`;
+currentDayTime.innerHTML = `${day} | ${currentMonth} ${date}, ${year} | ${hours}:${minutes}`;
 
 //Display searched city temp, humidity, wind, current status (via API call)
 
