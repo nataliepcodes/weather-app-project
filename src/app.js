@@ -49,6 +49,10 @@ function showTemperature(response) {
   let city = document.querySelector(".city");
   city.innerHTML = response.data.name;
   document.querySelector(".city-input").value;
+  document.querySelector(".city").innerHTML = response.data.name.replace(
+    "Arrondissement de",
+    ""
+  );
 
   let iconElement = document.querySelector("#icon"); //current-weather-description-icon
   iconElement.setAttribute(
