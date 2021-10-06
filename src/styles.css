@@ -94,11 +94,17 @@ input.city-input {
   display: inline;
   font-size: 35px;
 }
+
+.weather-temperature img {
+  margin: 0;
+  height: 70px;
+  width: 60px;
+  padding-bottom: 15px;
+}
 .current-temperature {
   color: #38a3a5;
   font-size: 35px;
   font-weight: 400;
-  padding-left: 10px;
 }
 
 .units {
@@ -156,7 +162,7 @@ footer {
   font-weight: 400;
   margin: 5px auto;
   padding-left: 6px;
-  width: 600px;
+  text-align: center;
 }
 .source-link,
 .host-link {
