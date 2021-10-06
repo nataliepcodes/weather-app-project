@@ -15,7 +15,8 @@ header {
 }
 
 input.city-input {
-  border: 1px solid #8ac4d0;
+  background: #b8dfd8;
+  border: 1px solid #b8dfd8;
   border-radius: 9px;
   font-family: "Lato", sans-serif;
   font-size: 14px;
@@ -25,12 +26,20 @@ input.city-input {
   padding: 10px;
   width: 250px;
 }
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #8ac4d0;
+  color: white;
   opacity: 1; /* Firefox */
 }
-
+input.city-input:hover {
+  background: #afebeb;
+  border: 4px solid white;
+  border-radius: 9px;
+  cursor: default;
+  color: white;
+  transition: all 200ms ease-out;
+}
 .submit-button {
   background: #b0b9b9;
   border: 2px solid white;
@@ -39,12 +48,12 @@ input.city-input {
   margin: 15px 5px;
   padding: 8px;
   text-align: center;
-  transition: all 200ms ease-in-out;
+  transition: all 200ms ease;
 }
 
 .submit-button:hover {
   cursor: pointer;
-  background: #8ac4d0;
+  background: #afebeb;
   border: 2px solid white;
   border-radius: 50px;
 }
