@@ -46,23 +46,31 @@ function showTemperature(response) {
   let descriptionElement = document.querySelector(".weather-status");
   descriptionElement.innerHTML = description;
 
-  document.querySelector(".city").innerHTML =
-    document.querySelector(".city-input").value;
+  let city = document.querySelector(".city");
+  city.innerHTML = response.data.name;
+  document.querySelector(".city-input").value;
 }
 
-//Feature: Search city
+//Feature: Search city and a default city
 //make API call to OpenWeather API, display city name and temperature
 
-function searchCity(event) {
-  event.preventDefault();
+function search(city) {
   let apiKey = "95b73a6940f2f07006ff745f669cf92a";
-  let city = document.querySelector(".city-input").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+
+  let city = document.querySelector(".city-input");
+  search(city.value);
+}
+
 let form = document.querySelector(".search-form");
-form.addEventListener("submit", searchCity);
+form.addEventListener("submit", handleSubmit);
+
+search("Tokyo");
 
 // Add unit conversion feature
 function showFahrenheitTemperature(event) {
