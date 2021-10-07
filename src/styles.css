@@ -149,6 +149,24 @@ input.city-input:hover {
   cursor: default;
 }
 
+.weather-forecast {
+  margin-top: 15px;
+  text-align: center;
+  color: black;
+}
+
+.weather-forecast-day {
+  font-size: 15px;
+  opacity: 0.5;
+  }
+
+  .weather-forecast-temperatures {
+  font-size: 13px;}
+
+  .weather-forecast-temperature-min {
+  opacity: 0.5}
+
+
 footer {
   color: white;
   font-size: 7px;
