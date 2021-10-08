@@ -109,7 +109,7 @@ div.col-1 {
 
 .city {
   color: #38a3a5;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 400;
   text-align: left;
   text-transform: capitalize;
@@ -121,11 +121,14 @@ div.col-1 {
 }
 
 .current-temp-col {
-  border-right: 1px solid white;
+  border-right: 1px solid grey;
   text-align: center;
 }
 .weather-temperature img {
+  height: 70px;
+  width: 60px;
   margin: 0;
+  padding-bottom: 15px;
 }
 .current-temperature {
   color: #38a3a5;
