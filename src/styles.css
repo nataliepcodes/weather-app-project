@@ -15,7 +15,7 @@ header {
 }
 .fas.fa-sun {
   color: white;
-  background: #b8dfd8;
+  background: #ec6e4c;
   border-radius: 6px;
   display: inline;
   font-size: 35px;
@@ -87,7 +87,7 @@ input.search-input:hover {
 
 .container {
   background: white;
-  border-radius: 20px;
+  border-radius: 10px;
   display: block;
   margin: 0 auto;
   padding: 6px;
