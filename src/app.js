@@ -56,7 +56,6 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let tempElement = document.querySelector(".current-temperature");
   tempElement.innerHTML = temperature;
-  celsiusTemperature = response.data.main.temp;
 
   let humidity = Math.round(response.data.main.humidity);
   let humElement = document.querySelector(".humidity-value");
@@ -124,27 +123,6 @@ function getCurrentLocation(event) {
 
 let myLocation = document.querySelector("#my-location");
 myLocation.addEventListener("click", getCurrentLocation);
-
-// Add unit conversion feature
-function showFahrenheitTemperature(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector(".current-temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-function showCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector(".current-temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 //Display weather forecast (note: API call is made in the function getForecast(coordinates), it is above function showTemperature(response))
 

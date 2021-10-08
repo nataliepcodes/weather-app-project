@@ -142,12 +142,6 @@ input.city-input:hover {
   bottom: 15px;
   text-decoration: none;
 }
-.celsius-link,
-.fahrenheit-link {
-  color: #38a3a5;
-  text-decoration: none;
-  cursor: default;
-}
 
 .weather-forecast {
   margin-top: 15px;
