@@ -34,7 +34,7 @@ input.search-input {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-style: italic;
-  margin-left: 10px;
+  margin-left: 15px;
   padding: 10px;
 }
 
@@ -94,7 +94,7 @@ div.col-1 {
 }
 .current-weather {
   color: #007580;
-  margin: 20px 10px;
+  margin: 45px 10px 20px;
   padding: 6px;
 }
 
@@ -111,17 +111,22 @@ div.col-1 {
   color: #38a3a5;
   font-size: 35px;
   font-weight: 400;
-  text-align: left;
+  text-align: center;
   text-transform: capitalize;
 }
 
+.city-col {
+  border-right: 1px solid grey;
+  padding: 0;
+}
 .weather-details-col {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 300;
 }
 
 .current-temp-col {
   border-right: 1px solid grey;
+  padding: 0;
   text-align: center;
 }
 .weather-temperature img {
@@ -145,14 +150,25 @@ div.col-1 {
   text-decoration: none;
 }
 
-.weather-forecast {
-  margin-top: 15px;
+p {
+  color: #ec6e4c;
+  font-size: 25px;
+  margin: 45px 15px 1px;
   text-align: center;
+}
+.weather-forecast {
+  background: #f2f2f1;
+  border: rgb(59, 59, 59);
+  border-radius: 6px;
   color: black;
+  margin: 1px 15px 25px;
+  padding: 20px 6px;
+  text-align: center;
 }
 
 .weather-forecast-day {
   font-size: 15px;
+  font-weight: bold;
   opacity: 0.5;
 }
 
@@ -166,7 +182,7 @@ div.col-1 {
 
 footer {
   color: white;
-  font-size: 7px;
+  font-size: 12px;
   font-weight: 400;
   margin: 5px auto;
   padding-left: 6px;
