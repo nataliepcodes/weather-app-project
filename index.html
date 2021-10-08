@@ -55,19 +55,20 @@
       </div>
       <div class="current-weather">
         <div class="row">
-          <div class="col-5">
+          <div class="col-5 city-col">
             <div class="city"></div>
           </div>
-          <div class="col">
+          <div class="col-4 current-temp-col">
             <div class="clearfix weather-temperature">
-              <img src="" alt="Clear" id="icon" class="float-left" />
+              <img src="" alt="Clear" id="icon" class="float-left" width="80" />
               <span class="current-temperature"></span>
               <span class="units">°C</span>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-8">
+          <div class="col-3 weather-details-col">
+            <div class="weather-status">
+              What's in the sky: <span class="weather-description"></span>
+            </div>
             <div class="humidity">
               Humidity:
               <span class="humidity-value"> 55</span>
@@ -76,11 +77,6 @@
             <div class="wind">
               Wind: <span class="wind-value"> 1</span>
               <span class="wind-metric">km/h</span>
-            </div>
-          </div>
-          <div class="col">
-            <div class="weather-status">
-              Weather description: <span class="weather-description"></span>
             </div>
           </div>
         </div>
