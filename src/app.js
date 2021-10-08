@@ -1,4 +1,5 @@
 // Feature: show current day, month, year and time
+
 let now = new Date();
 let currentDayTime = document.querySelector("div.current-day");
 
@@ -42,8 +43,15 @@ let year = now.getFullYear();
 let day = days[now.getDay()];
 currentDayTime.innerHTML = `${day} | ${currentMonth} ${date}, ${year} | ${hours}:${minutes}`;
 
-//Display searched city temp, humidity, wind, current status (via API call)
+//function and API call for weather forecast
+function getForecast(coordinates) {
+  let apiKey = "95b73a6940f2f07006ff745f669cf92a";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 
+//Display searched city temp, humidity, wind, current status (via API call)
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let tempElement = document.querySelector(".current-temperature");
@@ -77,6 +85,8 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord); // part of function and API call for weather forecast
 }
 
 //Feature: Search city and a default city
@@ -136,8 +146,10 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
-//Display forecast
-function displayForecast() {
+//Display weather forecast (note: API call is made in the function getForecast above function showTemperature)
+
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Thu", "Fri", "Sat", "Sun"];
@@ -164,4 +176,3 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-displayForecast();
