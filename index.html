@@ -30,14 +30,29 @@
     <header>Weather APP <i class="fas fa-sun"></i></header>
     <div class="container">
       <div class="current-day"></div>
-      <form class="search-form">
-        <input type="text" class="city-input" placeholder="Enter a city..." />
-        <input type="submit" class="submit-button" value="🔍 " />
-        <button type="location" class="btn my-location"id="my-location"><i class="fas fa-map-marker-alt"></i></button>
-  
-          
-        </button>
-      </form>
+      <div class="search-engine">
+        <form class="search-form">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter city name........"
+                class="form-control search-input"
+                id="city-input"
+                autocomplete="off"
+              />
+            </div>
+            <div class="col-1">
+              <input type="submit" class="submit-button" value="🔍 " />
+            </div>
+            <div class="col-2">
+              <button type="location" class="btn my-location" id="my-location">
+                <i class="fas fa-map-marker-alt"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
       <div class="current-weather">
         <div class="row">
           <div class="col-5">

@@ -72,7 +72,7 @@ function showTemperature(response) {
 
   let city = document.querySelector(".city");
   city.innerHTML = response.data.name;
-  document.querySelector(".city-input").value;
+  document.querySelector(".search-input").value;
   document.querySelector(".city").innerHTML = response.data.name.replace(
     "Arrondissement de",
     ""
@@ -100,7 +100,7 @@ function search(city) {
 function handleSubmit(event) {
   event.preventDefault();
 
-  let city = document.querySelector(".city-input");
+  let city = document.querySelector(".search-input");
   search(city.value);
 }
 
