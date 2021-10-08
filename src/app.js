@@ -107,7 +107,7 @@ function handleSubmit(event) {
 let form = document.querySelector(".search-form");
 form.addEventListener("submit", handleSubmit);
 
-search("San Francisco");
+search("Cincinnati");
 
 // Geo-location
 function searchLocation(position) {
