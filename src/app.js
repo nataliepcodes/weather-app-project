@@ -43,7 +43,7 @@ let year = now.getFullYear();
 let day = days[now.getDay()];
 currentDayTime.innerHTML = `${day} | ${currentMonth} ${date}, ${year} | ${hours}:${minutes}`;
 
-//function and API call for weather forecast
+//function and API call for getting city coordinates for the weather forecast feature
 function getForecast(coordinates) {
   let apiKey = "95b73a6940f2f07006ff745f669cf92a";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
@@ -86,7 +86,7 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  getForecast(response.data.coord); // part of function and API call for weather forecast
+  getForecast(response.data.coord); // part of function and API call for getting city coordinates for the weather forecast feature
 }
 
 //Feature: Search city and a default city
@@ -146,7 +146,7 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
-//Display weather forecast (note: API call is made in the function getForecast above function showTemperature)
+//Display weather forecast (note: API call is made in the function getForecast(coordinates), it is above function showTemperature(response))
 
 function displayForecast(response) {
   console.log(response.data.daily);
